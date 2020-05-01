@@ -10,23 +10,15 @@ This data pipeline will process Excel files, do data de-duplication and reductio
 USAGE/INSTRUCTIONS:
 -------------------
 
-0. One run script wraps the following mentioned steps into one
+0. Install Python3.7 pip, and virtualenv
 
-	./go.run
+	Python: https://www.python.org/downloads/
+     pip: https://pip.pypa.io/en/stable/installing/
+     virtualenv: python3 -m pip install --user virtualenv
 
-1. Data preparation steps
+1. Clone this repo
 
-   1.1. In Excel files dir, replace blank space in filename with underscore
-
-        ./convert_fnspace.sh
-
-   1.2. Convert all Excel files into csv files
-
-        ./convert_xls2csv.sh
-
-   1.3. Merge all csv files into one master csv file
-
-        ./allcsv2one.sh
+   git clone https://github.com/darpham/open-disclosure-data.git
 
 NOTE:  following wrapper script, go.run, will first delete all .csv files,
        then run all the steps above. 
