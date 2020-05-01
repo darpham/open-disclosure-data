@@ -17,6 +17,8 @@ from selenium.common.exceptions import TimeoutException
 from time import sleep
 from dircreator import DirCreator
 
+import pdb
+
 
 class Scraper():
     def __init__(self):
@@ -165,7 +167,7 @@ print("starting script")
 start_time = time.time()
 s = Scraper()
 try:
-    s.setUpScrapers()
+    pdb.run('s.setUpScrapers()')
 except:
     print("could not call setupScrapers")
 s.startScrapers()
