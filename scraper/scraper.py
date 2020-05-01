@@ -1,7 +1,7 @@
 import os
 import re
 import sys
-import chromedriver_binary  # Adds chromedriver binary to path
+# import chromedriver_binary  # Adds chromedriver binary to path
 
 import shutil
 import time
