@@ -69,8 +69,9 @@ class Scraper():
                  'safebrowsing.disable_download_protection': True,
                  "plugins.plugins_list": [plugs]}
         options.add_experimental_option("prefs", prefs)
-        self.driver = webdriver.Chrome(executable_path="C:\\Users\\ASCI-Red\\AppData\\Local\\Programs\\Python\\Python37\\Lib\\site-packages\\selenium\\webdriver\\chrome\\chromedriver.exe"
-            , options=options)
+        # self.driver = webdriver.Chrome(executable_path="C:\\Users\\ASCI-Red\\AppData\\Local\\Programs\\Python\\Python37\\Lib\\site-packages\\selenium\\webdriver\\chrome\\chromedriver.exe"
+        #     , options=options)
+        self.driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver", options=options)
 
         # bypass chromedriver headless security
         # self.driver.command_executor._commands["send_command"] = ("POST", '/session/$sessionId/chromium/send_command')
@@ -167,7 +168,8 @@ print("starting script")
 start_time = time.time()
 s = Scraper()
 try:
-    pdb.run('s.setUpScrapers()')
+    # pdb.run('s.setUpScrapers()')
+    s.setUpScrapers()
 except:
     print("could not call setupScrapers")
 s.startScrapers()
